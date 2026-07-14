@@ -1,0 +1,55 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@layer base {
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: #ffffff;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+}
+@layer components {
+  .form-control {
+    width: 100%;
+    min-height: 32px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    background: #ffffff;
+    padding: 0.375rem 0.5rem;
+    color: #1f2937;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .form-control:focus {
+    outline: none;
+    border-color: #86b7fe;
+    /* box-shadow: 0 0 0 3px rgba(0, 150, 80, 0.16); */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .print-page table {
+    break-inside: avoid;
+  }
+}
